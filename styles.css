@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 24px;
+  font-family: "Space Mono", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: hsl(185, 41%, 84%);
+  gap: 50px;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.title {
+  font-size: 1.75rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: hsl(186, 14%, 43%);
+}
+
+.container {
+  width: 900px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 25px;
+  padding: 35px;
+  display: flex;
+  gap: 35px;
+}
+.container .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.container .left .input {
+  position: relative;
+}
+.container .left .input label {
+  display: block;
+  font-size: 0.9rem;
+  color: hsl(186, 14%, 43%);
+  margin-bottom: 5px;
+}
+.container .left .input input {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  font-family: "Space Mono", sans-serif;
+  width: 95%;
+  font-weight: 800;
+  padding: 8px 15px;
+  text-align: right;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.container .left .input input::-moz-placeholder {
+  opacity: 0.5;
+}
+.container .left .input input::placeholder {
+  opacity: 0.5;
+}
+.container .left .input input#bill:hover,
+.container .left .input input#people:hover {
+  border: 2px solid hsl(172, 67%, 45%);
+}
+.container .left .input img {
+  width: 15px;
+  position: absolute;
+  top: 40px;
+  left: 15px;
+}
+.container .left .tip .text {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  color: hsl(186, 14%, 43%);
+}
+.container .left .tip .pct_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.container .left .tip .pct_buttons .pct_btn {
+  width: 120px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  font-size: 1.35rem;
+  font-family: "Space Mono", sans-serif;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.container .left .tip .pct_buttons .pct_btn:hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.container .left .tip .pct_buttons .custom {
+  box-sizing: border-box;
+  width: 120px;
+  padding: 10px;
+  text-align: right;
+  font-family: "Space Mono", sans-serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: hsl(189, 41%, 97%);
+  border: 2px solid transparent;
+  color: hsl(183, 100%, 15%);
+  outline: hsl(172, 67%, 45%);
+  caret-color: hsl(172, 67%, 45%);
+}
+.container .left .tip .pct_buttons .custom:hover, .container .left .tip .pct_buttons .custom:active {
+  border: 2px solid hsl(172, 67%, 45%);
+}
+.container .left .tip .pct_buttons .custom::-moz-placeholder {
+  text-align: center;
+  opacity: 0.7;
+  color: hsl(183, 100%, 15%);
+}
+.container .left .tip .pct_buttons .custom::placeholder {
+  text-align: center;
+  opacity: 0.7;
+  color: hsl(183, 100%, 15%);
+}/*# sourceMappingURL=styles.css.map */
