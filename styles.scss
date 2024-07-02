@@ -31,7 +31,6 @@ body{
     justify-content: center;
     flex-direction: column;
     background: $light-grayish-cyan;
-    gap: 50px;
 }
 
 input[type=number]::-webkit-outer-spin-button,
@@ -41,16 +40,18 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .title{
-    font-size: 1.75rem;
-    letter-spacing: 5px;
+    font-size: 1.65rem;
+    letter-spacing: 10px;
     text-transform: uppercase;
     color: $dark-grayish-cyan;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .container{
     width: 900px;
     background-color: $white;
-    border-radius: 25px;
+    border-radius: 15px;
     padding: 35px;
     display: flex;
     gap: 35px;
@@ -71,7 +72,7 @@ input[type=number]::-webkit-inner-spin-button {
                 background-color: $very-light-grayish-cyan;
                 color: $very-dark-cyan;
                 font-family: 'Space Mono', sans-serif;
-                width: 95%;
+                width: 100%;
                 font-weight: 800;
                 padding: 8px 15px;
                 text-align: right;
@@ -83,6 +84,9 @@ input[type=number]::-webkit-inner-spin-button {
                 &::placeholder{
                     opacity: 0.5;
                 }
+            }
+            input#people.error{
+                border: 2px solid red;
             }
             input#bill,
             input#people{
@@ -99,6 +103,20 @@ input[type=number]::-webkit-inner-spin-button {
                 left: 15px;
             }
         }
+        .error{
+            .input__top{
+                display: flex;
+                justify-content: space-between;
+                .error__msg{
+                    font-size: 0.9rem;
+                    color: red;
+                    display: none;
+                }
+                .error__msg.active{
+                    display: block;
+                }
+            }
+        }
         .tip{
             .text{
                 font-size: 0.8rem;
@@ -108,7 +126,7 @@ input[type=number]::-webkit-inner-spin-button {
             .pct_buttons{
                 display: flex;
                 flex-wrap: wrap;
-                gap: 10px;
+                gap: 15px;
                 .pct_btn{
                     width: 120px;
                     padding: 10px;
@@ -150,6 +168,86 @@ input[type=number]::-webkit-inner-spin-button {
                         color: $very-dark-cyan;
                     }
                 }
+            }
+        }
+    }
+    .right{
+        padding: 35px;
+        width: 50%;
+        background-color: $very-dark-cyan;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        .right__row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 32px;
+            .tip__amount{
+                .tip__title{
+                    font-size: 1rem;
+                    color: $white;
+                }
+                .tip__subtitle{
+                    font-size: 0.8rem;
+                    color: $dark-grayish-cyan;
+                }
+            }
+            .price{
+                .price__text{
+                    font-size: 2.2rem;
+                    color: $strong-cyan;
+                }
+            }
+        }
+        .reset_btn{
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            background-color: $strong-cyan;
+            font-family: 'Space Mono', sans-serif;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            opacity: 0.2;
+            cursor: pointer;
+            letter-spacing: 1px;
+            margin-top: 70px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 992px){
+    body{
+        display: block;
+        height: 100%;
+    }
+
+    .title{
+        margin-bottom: 0;
+        padding: 32px;
+    }
+    
+    .container{
+        width: 100%;
+        flex-direction: column;
+        border-radius: 25px 25px 0 0;
+        .left{
+            width: 100%;
+            gap: 40px;
+            .tip{
+                .pct_buttons{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+            }
+        }
+        .right{
+            width: 100%;
+            .reset_btn{
+                margin-top: 64px;
             }
         }
     }

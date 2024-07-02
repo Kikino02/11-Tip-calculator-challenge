@@ -19,7 +19,6 @@ body {
   justify-content: center;
   flex-direction: column;
   background: hsl(185, 41%, 84%);
-  gap: 50px;
 }
 
 input[type=number]::-webkit-outer-spin-button,
@@ -29,16 +28,18 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .title {
-  font-size: 1.75rem;
-  letter-spacing: 5px;
+  font-size: 1.65rem;
+  letter-spacing: 10px;
   text-transform: uppercase;
   color: hsl(186, 14%, 43%);
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .container {
   width: 900px;
   background-color: hsl(0, 0%, 100%);
-  border-radius: 25px;
+  border-radius: 15px;
   padding: 35px;
   display: flex;
   gap: 35px;
@@ -62,7 +63,7 @@ input[type=number]::-webkit-inner-spin-button {
   background-color: hsl(189, 41%, 97%);
   color: hsl(183, 100%, 15%);
   font-family: "Space Mono", sans-serif;
-  width: 95%;
+  width: 100%;
   font-weight: 800;
   padding: 8px 15px;
   text-align: right;
@@ -78,6 +79,9 @@ input[type=number]::-webkit-inner-spin-button {
 .container .left .input input::placeholder {
   opacity: 0.5;
 }
+.container .left .input input#people.error {
+  border: 2px solid red;
+}
 .container .left .input input#bill:hover,
 .container .left .input input#people:hover {
   border: 2px solid hsl(172, 67%, 45%);
@@ -88,6 +92,18 @@ input[type=number]::-webkit-inner-spin-button {
   top: 40px;
   left: 15px;
 }
+.container .left .error .input__top {
+  display: flex;
+  justify-content: space-between;
+}
+.container .left .error .input__top .error__msg {
+  font-size: 0.9rem;
+  color: red;
+  display: none;
+}
+.container .left .error .input__top .error__msg.active {
+  display: block;
+}
 .container .left .tip .text {
   font-size: 0.8rem;
   margin-bottom: 5px;
@@ -96,7 +112,7 @@ input[type=number]::-webkit-inner-spin-button {
 .container .left .tip .pct_buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 }
 .container .left .tip .pct_buttons .pct_btn {
   width: 120px;
@@ -142,4 +158,75 @@ input[type=number]::-webkit-inner-spin-button {
   text-align: center;
   opacity: 0.7;
   color: hsl(183, 100%, 15%);
+}
+.container .right {
+  padding: 35px;
+  width: 50%;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.container .right .right__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+}
+.container .right .right__row .tip__amount .tip__title {
+  font-size: 1rem;
+  color: hsl(0, 0%, 100%);
+}
+.container .right .right__row .tip__amount .tip__subtitle {
+  font-size: 0.8rem;
+  color: hsl(186, 14%, 43%);
+}
+.container .right .right__row .price .price__text {
+  font-size: 2.2rem;
+  color: hsl(172, 67%, 45%);
+}
+.container .right .reset_btn {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: hsl(172, 67%, 45%);
+  font-family: "Space Mono", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  opacity: 0.2;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    display: block;
+    height: 100%;
+  }
+  .title {
+    margin-bottom: 0;
+    padding: 32px;
+  }
+  .container {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 25px 25px 0 0;
+  }
+  .container .left {
+    width: 100%;
+    gap: 40px;
+  }
+  .container .left .tip .pct_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .container .right {
+    width: 100%;
+  }
+  .container .right .reset_btn {
+    margin-top: 64px;
+  }
 }/*# sourceMappingURL=styles.css.map */
