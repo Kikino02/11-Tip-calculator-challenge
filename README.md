@@ -9,8 +9,8 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ### Links:
 
-- Solution URL: [here](link)
-- Live site URL: [here](link)
+- Solution URL: [here](https://www.frontendmentor.io/solutions/tip-calculator-by-kikino-IFdO0ULWvB)
+- Live site URL: [here](https://11-tip-calculator-challenge.vercel.app/)
 
 ## My process
 
