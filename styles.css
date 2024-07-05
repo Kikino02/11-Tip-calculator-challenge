@@ -79,7 +79,8 @@ input[type=number]::-webkit-inner-spin-button {
 .container .left .input input::placeholder {
   opacity: 0.5;
 }
-.container .left .input input#people.error {
+.container .left .input input#people.error-border,
+.container .left .input input#bill.error-border {
   border: 2px solid red;
 }
 .container .left .input input#bill:hover,
@@ -100,9 +101,6 @@ input[type=number]::-webkit-inner-spin-button {
   font-size: 0.9rem;
   color: red;
   display: none;
-}
-.container .left .error .input__top .error__msg.active {
-  display: block;
 }
 .container .left .tip .text {
   font-size: 0.8rem;
@@ -127,6 +125,10 @@ input[type=number]::-webkit-inner-spin-button {
   cursor: pointer;
 }
 .container .left .tip .pct_buttons .pct_btn:hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.container .left .tip .pct_buttons .pct_btn.select {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
 }
@@ -198,6 +200,10 @@ input[type=number]::-webkit-inner-spin-button {
   cursor: pointer;
   letter-spacing: 1px;
   margin-top: 70px;
+}
+
+.active {
+  opacity: 1;
 }
 
 @media screen and (max-width: 992px) {
