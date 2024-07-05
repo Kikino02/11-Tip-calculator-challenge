@@ -1,13 +1,11 @@
-# NAME - Time tracking dashboard
+# Frontend Mentor - Tip calculator app solution
 
-
-This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](link).
+This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX).
 
 ## Overview
 
-
 ### Screenshot
-![Time tracking dashboard](screenshot)
+![Time tracking dashboard](./images/screenshot.png)
 
 ### Links:
 
@@ -21,6 +19,6 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 
 - HTML5
 - Sass/Scss
-- Grid/Flexbox
+- Flexbox
 - Google Fonts
 - Javascript
